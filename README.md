@@ -9,3 +9,6 @@ Los formularios sirven para agregar libros, revistas y películas a sus respecti
 También hice un formulario para buscar directores de películas en la base de datos.
 
 La estructura en general es muy similar a la que hicimos en clase, no creo que haya problema para entenderla.
+
+El super admin es petitedifer@gmail.com
+La contraseña es difer2811
