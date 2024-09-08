@@ -25,10 +25,41 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
+
                         <li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Inicio</a></li>
+
                         <li class="nav-item"><a class="nav-link" href="{% url 'libros' %}">Libros</a></li>
+                        {# DROPDOWN PARA LIBROS #}
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="{% url 'librosList' %}">Todos los libros</a></li>
+                                <li><a class="dropdown-item" href="{% url 'libroFormulario' %}">Agregar libro</a></li>
+                            </ul>
+                        </div>
+
                         <li class="nav-item"><a class="nav-link" href="{% url 'revistas' %}">Revistas</a></li>
+                        {# DROPDOWN PARA REVISTAS #}
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="{% url 'revistasList' %}">Todas las revistas</a></li>
+                                <li><a class="dropdown-item" href="{% url 'revistaFormulario' %}">Agregar revistas</a></li>
+                            </ul>
+                        </div>
                         <li class="nav-item"><a class="nav-link" href="{% url 'peliculas' %}">Peliculas</a></li>
+                        {# DROPDOWN PARA PELICULAS #}
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="{% url 'peliculasList' %}">Todas las peliculas</a></li>
+                                <li><a class="dropdown-item" href="{% url 'peliculaFormulario' %}">Agregar pelicula</a></li>
+                                <li><a class="dropdown-item" href="{% url 'busquedaDirector' %}">Buscar Director</a></li>
+                            </ul>
+                        </div>
                         <!-- <li class="nav-item"><a class="nav-link" href="{% url 'Login' %}">Iniciar sesión</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Crear cuenta</a></li> -->
                         {# DROPDOWN PARA LA CUENTA DE USUARIO #}

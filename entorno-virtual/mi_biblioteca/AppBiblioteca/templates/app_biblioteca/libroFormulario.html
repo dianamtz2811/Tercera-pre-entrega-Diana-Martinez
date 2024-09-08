@@ -7,11 +7,18 @@
 {% block contenidoQueCambia%}
 
 <body>
-    <form method="post">
-        {% csrf_token %}  {# Protección CSRF de Django #}
-        {{ miFormulario.as_table }}<!-- Renderiza los campos del formulario  -->
-        <button type="submit">Enviar</button>
-    </form>
+    <div align="center">
+        <br>
+        <h2>Agrega un nuevo libro</h2>
+        <br>
+        <form method="post">
+            {% csrf_token %}  {# Protección CSRF de Django #}
+            {{ miFormulario.as_table }}<!-- Renderiza los campos del formulario  -->
+            <button type="submit">Enviar</button>
+        </form>
+        <br>
+    </div>
+
 </body>
 
 {% endblock %}
