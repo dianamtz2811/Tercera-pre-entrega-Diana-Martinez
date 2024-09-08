@@ -21,6 +21,7 @@ from mi_biblioteca.views import agregar_libro, agregar_revista, agregar_pelicula
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AppBiblioteca/', include('AppBiblioteca.urls')),
+    path('users/', include ('users.urls')),
     path('agregar_libro/<nom>/<aut>/', agregar_libro),
     path('agregar_revista/<nom>/<aut>/<año>/', agregar_revista),
     path('agregar_pelicula/<nom>/<dir>/<año>/', agregar_pelicula)

@@ -1,0 +1,21 @@
+{% extends 'app_biblioteca/padre.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+<div align="center">
+    <h1>Los detalles sobre la película son:</h1>
+    <br>
+    <p>Nombre: <i>{{ object.nombre }}</i></p>
+    <p>Director: <i>{{ object.director }}</i></p>
+    <p>Fecha de lanzamiento: <i>{{ object.año }}</i></p>
+
+    <p>
+        <a href="{% url 'peliculasList' %}">Regresar</a>
+    </p>
+    <br>
+</div>
+
+{% endblock main %}

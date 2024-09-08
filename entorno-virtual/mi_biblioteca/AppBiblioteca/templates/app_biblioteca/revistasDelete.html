@@ -1,0 +1,22 @@
+{% extends 'app_biblioteca/padre.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+<div align="center">
+    <br>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <h2>¿Estás seguro de que quieres eliminar "{{ object.nombre }}"?</h2>
+        <button type="submit">Sí, eliminar</button>
+        <a href="{% url 'revistasList' %}">Cancelar</a>
+    </form>
+    <br>
+</div>
+
+
+{% endblock main %}

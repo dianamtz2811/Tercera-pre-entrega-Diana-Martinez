@@ -1,0 +1,20 @@
+{% extends 'app_biblioteca/padre.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+<div align="center">
+    <h1>Los detalles sobre el libro son:</h1>
+    <br>
+    <p>Nombre: <i>{{ object.nombre }}</i></p>
+    <p>Autor: <i>{{ object.autor }}</i></p>
+
+    <p>
+        <a href="{% url 'librosList' %}">Regresar</a>
+    </p>
+    <br>
+</div>
+
+{% endblock main %}

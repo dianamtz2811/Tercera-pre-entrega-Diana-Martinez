@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+{% extends 'app_biblioteca/padre.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
 <body>
+    <div align="center">
+    <h2>Busca el director que desees</h2>
+    <br>
     <form action="/AppBiblioteca/buscar/" method="GET">
         <input type="text" name="director" id="director">
         <input type="submit" value="Buscar">
     </form>
+    <br>
+    </div>
 </body>
+{% endblock %}
+
 </html>

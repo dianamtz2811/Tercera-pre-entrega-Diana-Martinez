@@ -1,0 +1,24 @@
+{% extends 'app_biblioteca/padre.html' %}
+
+{% load static %}
+
+{% block title %} Lista Libros {% endblock title %}
+
+{% block main %}
+
+    <h1 align="center">Libros en mi biblioteca</h1>
+
+    {% for libro in object_list %}
+
+        <div align="center">
+        <li>
+            <p>NOMBRE: {{ libro.nombre }}</p>
+            <p>
+
+            </p>
+        </li>
+    </div>
+
+    {% endfor %}
+
+{% endblock main %}

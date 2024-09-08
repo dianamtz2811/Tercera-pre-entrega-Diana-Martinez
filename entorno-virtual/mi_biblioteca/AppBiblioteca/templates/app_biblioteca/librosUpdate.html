@@ -1,0 +1,22 @@
+{% extends 'app_biblioteca/padre.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+<div align="center">
+    <h2>A continuación puedes modificar la información de un libro</h2>
+    <br>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input type="submit" value="Enviar">
+
+    </form>
+    <br>
+</div>
+
+{% endblock main %}

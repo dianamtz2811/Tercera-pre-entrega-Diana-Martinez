@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <p>Estamos buscando el: {{director}}</p>
 
-{% if director %}
-<ul>
-{% for director in pelicula %}
-    <li>{{ pelicula.nombre }}</li>
-    <li>{{ pelicula.director }}</li>
-{% endfor %}
-</ul>
-{% endif %}
+{% extends 'app_biblioteca/padre.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+<body>
+
+    <div align="center">
+        <h2>A continuación las películas que realizó {{director}}:</h2>
+        <br>
+        {% if director %}
+        <ul>
+            {% for pelicula in peliculas %}
+                <li>{{ pelicula.nombre }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <br>
 </body>
+
+{% endblock %}
+
 </html>

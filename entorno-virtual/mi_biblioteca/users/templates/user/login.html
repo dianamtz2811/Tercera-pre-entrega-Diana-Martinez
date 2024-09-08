@@ -1,0 +1,30 @@
+{% extends "app_biblioteca/padre.html"%}
+
+{% load static %}
+
+{% block title %} Login {% endblock title %}
+
+{% block main %}
+
+    {# Este div sólo está agregado para centrar el formulario en la página usando Bootstrap #}
+    <div align="center">
+
+        {# Con este div colocamos el título y debajo el formulario usando Bootstrap #}
+        <div align="center">
+
+            {# Mensaje personalizado en la vista de Login con estilos de Bootstrap #}
+            <h3>{{ msg_login }}</h3>
+            <br>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                
+                {{ form.as_p }}
+                <input type="submit" value="Iniciar sesión">
+
+            </form>
+            <br>
+
+        </div>
+    </div>
+{% endblock main %}
